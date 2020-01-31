@@ -1,4 +1,6 @@
 #include QMK_KEYBOARD_H
+#include "../../../wilba_tech/wt_rgb_backlight.h"
+#include "../../../wilba_tech/wt_rgb_backlight_api.h"
 
 #define BASE_LAYER 0
 #define NAV_LAYER 1
@@ -55,6 +57,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
+void matrix_init_user(void) {
+  uint8_t backlight_config[2] = { id_effect, 0 };
+  backlight_config_set_value(backlight_config);
+}
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (IS_LAYER_OFF(NAV_LAYER)) {
