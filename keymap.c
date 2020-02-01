@@ -58,7 +58,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 void matrix_init_user(void) {
-  uint8_t backlight_config[2] = { id_effect, 0 };
+  // Use the 11th (illegal!) backlighting configuration
+  // We patch the wilba_tech RGB backlighting control to route to our custom
+  // backlight_effect_user when the id_effect is set to 11.
+
+  uint8_t backlight_config[2] = { id_effect, 11 };
   backlight_config_set_value(backlight_config);
 }
 
