@@ -13,7 +13,11 @@ void backlight_effect_user(void) {
     if (hit_time > 255) hit_time = 255;
 
     uint8_t brightness = 255 - hit_time;
-    HSV hsv = { .h = 191, .s = 214, .v = brightness };
+
+    // h = 191
+    // h = (g_tick << g_config.effect_speed) & 0xFF
+
+    HSV hsv = { .h = 204, .s = 255, .v = brightness };
     RGB rgb = hsv_to_rgb(hsv);
     backlight_set_color(i, rgb.r, rgb.g, rgb.b);
   }

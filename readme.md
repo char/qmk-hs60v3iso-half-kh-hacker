@@ -5,7 +5,7 @@ Ported from `qmk-dz60-half-kh-hacker`.
 ## Usage
 
 1. Clone the repo to `qmk/keyboards/hs60/v2/iso/keymaps/half-kh-hacker`
-2. To build, type `make hs60/v2/is0:half-kh-hacker`
+2. To build, type `make hs60/v2/iso:half-kh-hacker`
 3. Flash as usual.
 
 ## Notes
