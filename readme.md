@@ -5,7 +5,7 @@ Ported from `qmk-dz60-half-kh-hacker`.
 ## Usage
 
 1. Clone the repo to `qmk/keyboards/hs60/v2/iso/keymaps/half-kh-hacker`
-2. To build, type `make hs60/v2/iso:half-kh-hacker`
+2. To build, type `make hs60/v2/iso:half-kh-hacker` (or just `qmk compile`)
 3. Flash as usual.
 
 ## Notes
@@ -18,7 +18,7 @@ Ported from `qmk-dz60-half-kh-hacker`.
      }
  }
  
-+#include "../hs60/v2/iso/keymaps/half-kh-hacker/backlighting/purple_reactive.h"
++#include "../hs60/v2/iso/keymaps/half-kh-hacker/backlighting/user_bl.h"
 +
  #if !defined(RGB_BACKLIGHT_HS60) && !defined(RGB_BACKLIGHT_NK65)
 ```
